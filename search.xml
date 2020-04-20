@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>激动的心情---个人博客搭建成功啦</title>
-    <url>/2020/04/19/%E6%BF%80%E5%8A%A8%E7%9A%84%E5%BF%83%E6%83%85-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E5%95%A6/</url>
-    <content><![CDATA[<h2 id="当当当"><a href="#当当当" class="headerlink" title="当当当!"></a>当当当!</h2><p>printf(“Hello World!”);</p>
-<hr>
+    <title>F12的神奇发现</title>
+    <url>/2020/04/20/F12%E7%9A%84%E7%A5%9E%E5%A5%87%E5%8F%91%E7%8E%B0/</url>
+    <content><![CDATA[<p>F12中竟然可以找到彩蛋—招聘信息，这你敢信？</p>
 ]]></content>
+      <categories>
+        <category>好玩的发现</category>
+      </categories>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -23,6 +25,13 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>激动的心情---个人博客搭建成功啦</title>
+    <url>/2020/04/19/%E6%BF%80%E5%8A%A8%E7%9A%84%E5%BF%83%E6%83%85-%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E5%95%A6/</url>
+    <content><![CDATA[<h2 id="当当当"><a href="#当当当" class="headerlink" title="当当当!"></a>当当当!</h2><p>printf(“Hello World!”);</p>
+<hr>
 ]]></content>
   </entry>
 </search>
