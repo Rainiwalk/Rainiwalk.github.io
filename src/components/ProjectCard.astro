@@ -10,6 +10,23 @@ interface Props {
 
 const { title, description, tags, github, url, status } = Astro.props;
 
+const tagColorMap: Record<string, string> = {
+  TypeScript: "tag-blue",
+  JavaScript: "tag-blue",
+  Kotlin: "tag-purple",
+  Java: "tag-purple",
+  "C++": "tag-blue",
+  C: "tag-blue",
+  Python: "tag-green",
+  Astro: "tag-orange",
+  "Tailwind CSS": "tag-pink",
+  CSS: "tag-pink",
+};
+
+function getTagClass(tag: string): string {
+  return tagColorMap[tag] ?? "tag-default";
+}
+
 const statusLabels = {
   active: "Active",
   archived: "Archived",
@@ -24,7 +41,7 @@ const statusColors = {
 ---
 
 <article
-  class="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-gray-300 hover:shadow-sm dark:border-gray-800 dark:bg-gray-900/50 dark:hover:border-gray-700"
+  class="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-gray-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900/50 dark:hover:border-gray-700"
 >
   <div class="flex items-start justify-between">
     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -51,7 +68,7 @@ const statusColors = {
   </p>
 
   <div class="mt-4 flex flex-wrap items-center gap-2">
-    {tags.map((tag) => <span class="tag">{tag}</span>)}
+    {tags.map((tag) => <span class:list={["tag", getTagClass(tag)]}>{tag}</span>)}
   </div>
 
   {github && (

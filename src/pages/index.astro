@@ -2,10 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const focusAreas = [
-  { label: "Android Audio Framework", icon: "🎧" },
-  { label: "Audio Systems", icon: "🔊" },
-  { label: "AI-assisted Development", icon: "🤖" },
-  { label: "Developer Tooling", icon: "🛠️" },
+  { label: "Android Audio Framework", icon: "🎧", color: "bg-blue-50 dark:bg-blue-900/20" },
+  { label: "Audio Systems", icon: "🔊", color: "bg-purple-50 dark:bg-purple-900/20" },
+  { label: "AI-assisted Development", icon: "🤖", color: "bg-emerald-50 dark:bg-emerald-900/20" },
+  { label: "Developer Tooling", icon: "🛠️", color: "bg-orange-50 dark:bg-orange-900/20" },
 ];
 ---
 
@@ -39,9 +39,11 @@ const focusAreas = [
     <h2 class="section-heading">Currently Focused On</h2>
     <div class="grid gap-4 sm:grid-cols-2">
       {
-        focusAreas.map(({ label, icon }) => (
-          <div class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-4 transition-colors dark:border-gray-800 dark:bg-gray-900/50">
-            <span class="text-xl">{icon}</span>
+        focusAreas.map(({ label, icon, color }) => (
+          <div class="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-4 transition-all hover:shadow-sm dark:border-gray-800 dark:bg-gray-900/50">
+            <span class:list={["flex h-9 w-9 items-center justify-center rounded-lg text-base", color]}>
+              {icon}
+            </span>
             <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
               {label}
             </span>
@@ -56,7 +58,7 @@ const focusAreas = [
     <div class="space-y-4">
       <a
         href="/projects"
-        class="group flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-gray-300 hover:shadow-sm dark:border-gray-800 dark:bg-gray-900/50 dark:hover:border-gray-700"
+        class="group flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-gray-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900/50 dark:hover:border-gray-700"
       >
         <div>
           <h3 class="font-medium text-gray-900 dark:text-white">Projects</h3>
@@ -68,7 +70,7 @@ const focusAreas = [
       </a>
       <a
         href="/about"
-        class="group flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-gray-300 hover:shadow-sm dark:border-gray-800 dark:bg-gray-900/50 dark:hover:border-gray-700"
+        class="group flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4 transition-all hover:border-gray-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900/50 dark:hover:border-gray-700"
       >
         <div>
           <h3 class="font-medium text-gray-900 dark:text-white">About</h3>
