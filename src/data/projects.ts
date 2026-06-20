@@ -14,6 +14,7 @@ export const projects: Project[] = [
       "Explore how cities became what they are today in just 5 minutes.",
     tags: ["TypeScript", "CSS", "JavaScript"],
     github: "https://github.com/Rainiwalk/what-happened-here",
+    url: "https://rainiwalk.github.io/what-happened-here/",
     status: "active",
   },
   {
@@ -22,6 +23,7 @@ export const projects: Project[] = [
       "This website. Built with Astro, Tailwind CSS, and deployed to GitHub Pages.",
     tags: ["Astro", "Tailwind CSS", "TypeScript"],
     github: "https://github.com/Rainiwalk/rainiwalk.github.io",
+    url: "https://rainiwalk.github.io",
     status: "active",
   },
 ];
