@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteName = "Rainiwalk";
+const fullTitle = title === "Home" ? `${siteName} — Software Engineer` : `${title} | ${siteName}`;
+---
+
+<!-- Primary Meta -->
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="author" content="Rainiwalk" />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={siteName} />
+{ogImage && <meta property="og:image" content={new URL(ogImage, Astro.site)} />}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={fullTitle} />
+<meta property="twitter:description" content={description} />
+
+<title>{fullTitle}</title>

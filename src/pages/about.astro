@@ -1,0 +1,152 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const techStack = [
+  { category: "Languages", items: ["C", "C++", "Java", "Kotlin", "Python"] },
+  {
+    category: "Android",
+    items: [
+      "AOSP",
+      "Audio Framework",
+      "AudioFlinger",
+      "AudioPolicy",
+      "HAL",
+    ],
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git", "Linux", "ADB", "LLDB", "VS Code", "Claude Code"],
+  },
+  {
+    category: "Interests",
+    items: [
+      "Embedded Systems",
+      "Audio DSP",
+      "AI-assisted Development",
+      "Developer Tooling",
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="About"
+  description="Learn more about Rainiwalk — a Software Engineer working on Android Audio Framework development."
+>
+  <section class="animate-fade-in">
+    <h1 class="section-heading">About</h1>
+
+    <div class="prose-custom space-y-6">
+      <p>
+        I'm a Software Engineer working on Android Audio Framework development.
+        My day-to-day work involves understanding and improving audio systems
+        at the platform level — from HAL interactions to framework services.
+      </p>
+
+      <p>
+        I'm still early in my audio engineering career, and I approach this
+        field with curiosity and a willingness to learn. I believe in building
+        a deep understanding of systems by reading code, asking questions, and
+        experimenting.
+      </p>
+
+      <p>
+        Outside of work, I enjoy exploring how AI tools like Claude and ChatGPT
+        can be used to accelerate development, improve code understanding, and
+        automate repetitive tasks. I build small projects and experiments to
+        test these ideas.
+      </p>
+
+      <p>
+        I'm a firm believer in learning in public — sharing what I discover
+        along the way, even (especially) when I'm still figuring things out.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-heading">Technologies</h2>
+    <div class="space-y-6">
+      {
+        techStack.map(({ category, items }) => (
+          <div>
+            <h3 class="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500">
+              {category}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {items.map((item) => (
+                <span class="tag">{item}</span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="section-heading">What I'm Working On Now</h2>
+    <p class="mb-6 text-sm text-gray-500 dark:text-gray-500">
+      Last updated: June 2025
+    </p>
+    <div class="space-y-8">
+      <div>
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500">
+          Work
+        </h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Deepening understanding of Android Audio HAL layer</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Studying AudioFlinger internals and audio routing</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Improving debugging workflows for audio pipeline issues</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500">
+          Learning
+        </h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Audio signal processing fundamentals</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Linux kernel audio subsystem (ALSA/ASoC)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Advanced C++ patterns used in Android frameworks</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500">
+          Exploring
+        </h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Using Claude Code for code comprehension and refactoring</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">AI-assisted approaches to understanding large codebases</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span class="text-gray-700 dark:text-gray-300">Building developer tools to improve daily workflows</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
